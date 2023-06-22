@@ -3,7 +3,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.FileReader;
-import java.io.*;
+
 
 
 import javax.servlet.ServletException;
@@ -25,7 +25,7 @@ public class FitForDutyServlet extends HttpServlet {
             while ((line = reader.readLine()) != null) {
                 content.append(line);
         }
-        PrintWriter out = response.getWriter();
+        PrintWriter writer out = response.getWriter();
         writer.println(content.toString());
         }
         catch (FileNotFoundException e) {
