@@ -13,8 +13,8 @@
 
     <servlet-mapping>
         <servlet-name>Fit4DutyServlet</servlet-name>
-        <url-pattern>/fit4duty</url-pattern>
-         <url-pattern>/fit-for-duty</url-pattern>
+       
+        <url-pattern>/fit-for-duty</url-pattern>
     </servlet-mapping>
 
     <!-- Welcome file list -->
