@@ -17,6 +17,28 @@ public class FitForDutyServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+                 // Retrieve the selected options from the request parameters
+        String physicalSymptoms = request.getParameter("physicalSymptoms");
+        String cognitiveFunction = request.getParameter("cognitiveFunction");
+        String emotionalState = request.getParameter("emotionalState");
+        String workloadResponsibilities = request.getParameter("workloadResponsibilities");
+        String environmentalFactors = request.getParameter("environmentalFactors");
+        String personalFactors = request.getParameter("personalFactors");
+            
+                // Perform the fitness calculation using FitForDutyApp
+        FitForDutyApp fitForDutyApp = new FitForDutyApp();
+        String result = fitForDutyApp.selectOption(
+            physicalSymptoms, cognitiveFunction, emotionalState,
+            workloadResponsibilities, environmentalFactors, personalFactors
+    );
+    
+    // Set the result as a request attribute
+    request.setAttribute("fitForDutyResult", result);
+    
+    // Forward the request to the JSP for rendering
+    RequestDispatcher dispatcher = request.getRequestDispatcher("/result.jsp");
+    dispatcher.forward(request, response);
+        
         response.setContentType("text/html");
                  // Get the path to the fit-for-duty.html file
         String filePath = getServletContext().getRealPath("/fit-for-duty.html");
