@@ -39,7 +39,7 @@ public class FitForDutyServlet extends HttpServlet {
             environmentalFactors, 
             personalFactors
         );
-    );
+    
     
     // Set the result as a request attribute
     request.setAttribute("fitForDutyResult", result);
