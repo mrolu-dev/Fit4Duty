@@ -15,13 +15,16 @@ public class FitForDutyServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
         throws ServletException, IOException {
-    // Retrieve the selected options from the request parameters
-    String physicalSymptoms = request.getParameter("physicalSymptoms");
-    String cognitiveFunction = request.getParameter("cognitiveFunction");
-    String emotionalState = request.getParameter("emotionalState");
-    String workloadResponsibilities = request.getParameter("workloadResponsibilities");
-    String environmentalFactors = request.getParameter("environmentalFactors");
-    String personalFactors = request.getParameter("personalFactors");
+    // Create a Scanner object to read user input from the request
+    Scanner scanner = new Scanner(request.getInputStream());
+
+    // Read the selected options from the user input
+    String physicalSymptoms = scanner.nextLine();
+    String cognitiveFunction = scanner.nextLine();
+    String emotionalState = scanner.nextLine();
+    String workloadResponsibilities = scanner.nextLine();
+    String environmentalFactors = scanner.nextLine();
+    String personalFactors = scanner.nextLine();
 
     // Perform the fitness calculation using FitForDutyApp
     FitForDutyApp fitForDutyApp = new FitForDutyApp();
@@ -41,6 +44,10 @@ public class FitForDutyServlet extends HttpServlet {
     RequestDispatcher dispatcher = request.getRequestDispatcher("/result.jsp");
     dispatcher.forward(request, response);
 }
+
+    
+
+   
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
