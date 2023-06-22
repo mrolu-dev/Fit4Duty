@@ -57,15 +57,15 @@ public class FitForDutyApp {
     return selectedOption - 1;
 }
     
-    private static int calculateFatigue(int physicalSymptoms, int cognitiveFunction, int workloadResponsibilities) {
+    public static int calculateFatigue(int physicalSymptoms, int cognitiveFunction, int workloadResponsibilities) {
         return physicalSymptoms + cognitiveFunction + workloadResponsibilities;
     }
     
-    private static int calculateStress(int emotionalState, int environmentalFactors, int personalFactors) {
+    public static int calculateStress(int emotionalState, int environmentalFactors, int personalFactors) {
         return emotionalState + environmentalFactors + personalFactors;
     }
     
-    private static boolean isFitForDuty(int fatigue, int stress) {
+    public static boolean isFitForDuty(int fatigue, int stress) {
         return fatigue <= 6 && stress <= 6;
     }
     
