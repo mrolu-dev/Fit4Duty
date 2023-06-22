@@ -25,13 +25,8 @@ public class FitForDutyServlet extends HttpServlet {
             while ((line = reader.readLine()) != null) {
                 content.append(line);
         }
-        PrintWriter out = response.getWriter();
+        PrintWriter writer out = response.getWriter();
         writer.println(content.toString());
-        }
-        catch (FileNotFoundException e) {
-        e.printStackTrace();
-        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-    }
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Fit4Duty</title>");
@@ -41,6 +36,12 @@ public class FitForDutyServlet extends HttpServlet {
         out.println("<p>This is the Fit4Duty servlet.</p>");
         out.println("</body>");
         out.println("</html>");
+        }
+        catch (FileNotFoundException e) {
+        e.printStackTrace();
+        response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+    }
+        
         
     }
 }
