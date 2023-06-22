@@ -32,8 +32,13 @@ public class FitForDutyServlet extends HttpServlet {
                 // Perform the fitness calculation using FitForDutyApp
         FitForDutyApp fitForDutyApp = new FitForDutyApp();
         String result = fitForDutyApp.selectOption(
-            physicalSymptoms, cognitiveFunction, emotionalState,
-            workloadResponsibilities, environmentalFactors, personalFactors
+            physicalSymptoms, 
+            cognitiveFunction, 
+            emotionalState, 
+            workloadResponsibilities, 
+            environmentalFactors, 
+            personalFactors
+        );
     );
     
     // Set the result as a request attribute
