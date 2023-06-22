@@ -25,8 +25,8 @@ public class FitForDutyServlet extends HttpServlet {
             while ((line = reader.readLine()) != null) {
                 content.append(line);
         }
-        PrintWriter writer out = response.getWriter();
-        writer.println(content.toString());
+        PrintWriter out = response.getWriter();
+        out.println(content.toString());
         out.println("<html>");
         out.println("<head>");
         out.println("<title>Fit4Duty</title>");
