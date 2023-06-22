@@ -32,5 +32,15 @@ public class FitForDutyServlet extends HttpServlet {
     } catch (FileNotFoundException e) {
         e.printStackTrace();
         response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+         out.println("<html>");
+        out.println("<head>");
+        out.println("<title>Fit4Duty</title>");
+        out.println("</head>");
+        out.println("<body>");
+        out.println("<h1>Welcome to Fit4Duty</h1>");
+        out.println("<p>This is the Fit4Duty servlet.</p>");
+        out.println("</body>");
+        out.println("</html>");
     }
+}
 }
