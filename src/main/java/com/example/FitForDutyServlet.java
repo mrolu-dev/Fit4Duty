@@ -25,7 +25,7 @@ public class FitForDutyServlet extends HttpServlet {
             while ((line = reader.readLine()) != null) {
                 content.append(line);
         }
-        PrintWriter writer out = response.getWriter();
+        PrintWriter out = response.getWriter();
         writer.println(content.toString());
         }
         catch (FileNotFoundException e) {
