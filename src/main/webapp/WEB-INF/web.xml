@@ -7,12 +7,12 @@
 
     <!-- Servlet mappings -->
     <servlet>
-        <servlet-name>Fit4DutyServlet</servlet-name>
-        <servlet-class>com.example.Fit4DutyServlet</servlet-class>
+        <servlet-name>FitForDutyServlet</servlet-name>
+        <servlet-class>com.example.FitForDutyServlet</servlet-class>
     </servlet>
 
     <servlet-mapping>
-        <servlet-name>Fit4DutyServlet</servlet-name>
+        <servlet-name>FitForDutyServlet</servlet-name>
        
         <url-pattern>/fit-for-duty</url-pattern>
     </servlet-mapping>
