@@ -32,12 +32,12 @@ public class FitForDutyServlet extends HttpServlet {
                 // Perform the fitness calculation using FitForDutyApp
         FitForDutyApp fitForDutyApp = new FitForDutyApp();
         String result = fitForDutyApp.selectOption(
-            physicalSymptoms, 
-            cognitiveFunction, 
-            emotionalState, 
-            workloadResponsibilities, 
-            environmentalFactors, 
-            personalFactors
+            new String[]{physicalSymptoms},
+            new String[]{cognitiveFunction},
+            new String[]{emotionalState},
+            new String[]{workloadResponsibilities},
+            new String[]{environmentalFactors},
+            new String[]{personalFactors}
         );
     
     
